@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="PluralKit.API\**" />
+    <Compile Remove="PluralKit.Core\**" />
+    <EmbeddedResource Remove="PluralKit.API\**" />
+    <EmbeddedResource Remove="PluralKit.Core\**" />
+    <None Remove="PluralKit.API\**" />
+    <None Remove="PluralKit.Core\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RevoltSharp" Version="8.1.0" />
+    <PackageReference Include="RevoltSharp.Commands" Version="1.2.1" />
+  </ItemGroup>
+
+</Project>
