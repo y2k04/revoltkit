@@ -8,15 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="PluralKit.API\**" />
-    <Compile Remove="PluralKit.Core\**" />
-    <EmbeddedResource Remove="PluralKit.API\**" />
-    <EmbeddedResource Remove="PluralKit.Core\**" />
-    <None Remove="PluralKit.API\**" />
-    <None Remove="PluralKit.Core\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="RevoltSharp" Version="8.1.0" />
