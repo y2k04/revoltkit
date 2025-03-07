@@ -1,2 +1,2 @@
 # revoltkit
-A PluralKit bot for Revolt
+A PluralKit API bot for Revolt
