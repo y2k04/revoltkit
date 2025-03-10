@@ -2,7 +2,6 @@
 A PluralKit API bot for Revolt
 
 ## To Do
-- [ ] Add more to readme
+- [ ] Add 'How to use' instructions and fill out readme
 - [ ] Implement API Client
 - [ ] Comment code
-- [ ] Add 'How to use' instructions
