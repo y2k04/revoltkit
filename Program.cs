@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
+using RevoltKit.API;
 using RevoltKit.Helpers;
 using RevoltKit.User;
 using RevoltSharp;
@@ -26,12 +27,19 @@ namespace RevoltKit
 
         static void Main()
         {
+            if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("PluralKit_Debug")))
+            {
+                PluralKitTest.Test().GetAwaiter().GetResult();
+                Environment.Exit(0);
+            }
+
             if (string.IsNullOrEmpty(Config.Token))
             {
                 Console.WriteLine("Error: 'RevoltKit_BotToken' is not set or is empty.\n\nPress any key to exit...");
                 Console.ReadKey();
                 Environment.Exit(1);
             }
+
             SetConsoleCtrlHandler(handler, true);
             svcProvider = services.BuildServiceProvider();
             commandHandler = new CommandHandler(client, commandSVC, svcProvider);

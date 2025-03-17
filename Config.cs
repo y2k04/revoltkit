@@ -2,7 +2,7 @@
 {
     public static class Config
     {
-        public static string Token = Environment.GetEnvironmentVariable("RevoltKit_BotToken");
-        public static string Prefix = "pk;";
+        public static readonly string Token = Environment.GetEnvironmentVariable("RevoltKit_BotToken");
+        public static readonly string Prefix = "pk;";
     }
 }
